@@ -9,10 +9,12 @@ Usage:
 
 1. Create a data directory /path/to/data/
 2. Under the above directory, make two directories 'images' and 'annotations', and under the 'annotations' make another directory 'xmls'
-3. Create a label map .pbtxt file that contains the your class information. Something like the tensorflow example tensorflow/models/object_detection/data/pet_label_map.pbtxt but with your own classes
+3. Create a label map .pbtxt file that contains the your class information. Something like the tensorflow example https://github.com/tensorflow/models/blob/master/object_detection/data/pet_label_map.pbtxt but with your own classes
 4. Put all your sample images (.jpeg) under /path/to/data/images
 5. For annotations xml files, you can use this tool https://github.com/tzutalin/ImageNet_Utils.git . Put all xml files under /path/to/data/annotations/xmls.
 6. Run the file in terminal: python create_tf_record.py --data_dir=/path/to/data/ \
                                                         --output_dir=/path/to/output \
                                                         --label_map_path=/path/to/label/map/file
 7. You will then find the generated train.record and val.record files at /path/to/output
+
+Then with the .record files and your label map, you can proceed to train the model as instructed in the example https://github.com/tensorflow/models/blob/master/object_detection/g3doc/running_pets.md
