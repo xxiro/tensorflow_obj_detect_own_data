@@ -9,9 +9,9 @@ Usage:
 
 1. Create a data directory /path/to/data/
 2. Under the above directory, make two directories 'images' and 'annotations', and under the 'annotations' make another directory 'xmls'
-3. Create a label map .pbtxt file that contains the your class information. Something like the tensorflow example https://github.com/tensorflow/models/blob/master/object_detection/data/pet_label_map.pbtxt but with your own classes
-4. Put all your sample images (.jpeg) under /path/to/data/images
-5. For annotations xml files, you can use this tool https://github.com/tzutalin/labelImg.git . Put all xml files under /path/to/data/annotations/xmls.
+3. Put all your sample images (.jpeg) under /path/to/data/images
+4. For annotations xml files, you can use this tool https://github.com/tzutalin/labelImg.git . Put all xml files under /path/to/data/annotations/xmls.
+5. Create a label map .pbtxt file that contains the your class information. Something like the tensorflow example https://github.com/tensorflow/models/blob/master/object_detection/data/pet_label_map.pbtxt but with your own classes
 6. Download create_my_tf_record.py and put it under tensorflow/models/object_detection/. Then open terminal, cd to that directory and run: 
 ```
 $ python create_my_tf_record.py --data_dir=/path/to/data/ \
@@ -20,4 +20,4 @@ $ python create_my_tf_record.py --data_dir=/path/to/data/ \
 ```
 7. You will then find the generated train.record and val.record files at /path/to/output
 
-Then with the .record files and your label map, you can proceed to train the model as instructed in the example https://github.com/tensorflow/models/blob/master/object_detection/g3doc/running_pets.md
+Then with the .record files and your label map, you can proceed to train the model as instructed in the example https://github.com/tensorflow/models/blob/master/object_detection/g3doc/running_pets.md . Or you can take a look at my blog for a quick walkthrough: xyanblog.wordpress.com 
