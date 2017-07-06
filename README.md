@@ -20,4 +20,4 @@ $ python create_my_tf_record.py --data_dir=/path/to/data/ \
 ```
 7. You will then find the generated train.record and val.record files at /path/to/output
 
-Then with the .record files and your label map, you can proceed to train the model as instructed in the example https://github.com/tensorflow/models/blob/master/object_detection/g3doc/running_pets.md . Or you can take a look at my blog for a quick walkthrough: xyanblog.wordpress.com 
+Then with the .record files and your label map, you can proceed to train the model as instructed in the example https://github.com/tensorflow/models/blob/master/object_detection/g3doc/running_pets.md . Or you can take a look at my blog for a quick walkthrough: https://xyanblog.wordpress.com 
